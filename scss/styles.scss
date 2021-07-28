@@ -14,7 +14,7 @@
     max-width: 610px;
     height: 495px;
     background: white;
-    margin-top: calc(50vh - 270px);
+    margin-top: calc(50vh - 240px);
     -moz-border-radius: 20px !important;
     -webkit-border-radius: 20px !important;
     border-radius: 20px !important;
@@ -72,32 +72,34 @@
       user-select: none; /* Non-prefixed version, supported by Chrome, Edge, Opera and Firefox */
     }
 
-    .btn-secondary {
+    .btn-block {
       width: 245px;
+      //(#vcard(width) / 2) * margin-left of .card-body - (.btn-block(width) / 2)
+      margin-left: calc((610px / 2) - 70px - (245px / 2));
       line-height: 28px;
       font-size: 16px;
       border-radius: 8px;
-      color: white;
       background-color: black;
       border-color: black;
 
-      span{
+      a:link, a:visited, a:hover, a:active {
+        text-decoration: none;
+        }
+
+      span {
         font-weight: 800;
         letter-spacing: 2px;
       }
+
+      &:hover, &:focus, &:active, &.active, &:active:focus {
+         background-color: #4d4d4d;
+        -webkit-box-shadow: -2px -1px 8px 4px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: -3px -2px 15px 7px rgba(0, 0, 0, 0.425);
+        box-shadow: -4px -3px 23px 11px rgba(0, 0, 0, 0.35);
+      }
     }
 
-     .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .btn-secondary:active:focus,
-    .open > .dropdown-toggle.btn-secondary {
-      color: black;
-      background-color: white;
-      border-color: black;
-      -webkit-box-shadow: -2px -1px 8px 4px rgba(0, 0, 0, 0.5);
-      -moz-box-shadow: -3px -2px 15px 7px rgba(0, 0, 0, 0.425);
-      box-shadow: -4px -3px 23px 11px rgba(0, 0, 0, 0.35);
-    }
-
-    p, .spotlight-button {
+    p, .btn-block {
       font-weight: 400;
       font-style: normal;
       margin-top: 3px;
@@ -124,8 +126,9 @@
     }
 
     #icon-first {
-      height: 38px;
-      margin: 0 8px;
+      height: 36px;
+      margin: 2px 9px;
+      padding-top: 1px;
     }
 
     .icon-static:hover {
