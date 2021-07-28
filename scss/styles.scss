@@ -11,9 +11,9 @@
   z-index: 20;
 
   #vcard {
-    max-width: 620px;
-    height: 550px;
-    background: #fff;
+    max-width: 610px;
+    height: 495px;
+    background: white;
     margin-top: calc(50vh - 270px);
     -moz-border-radius: 20px !important;
     -webkit-border-radius: 20px !important;
@@ -21,7 +21,7 @@
     z-index: 20;
 
     &:hover {
-      transform: scale(1.03);
+      transform: scale(1.04);
     }
   }
 }
@@ -62,7 +62,7 @@
   }
 
   .card-body {
-    padding-top: 3px;
+    padding-top: 1px;
 
     article {
       -webkit-touch-callout: none; /* iOS Safari */
@@ -73,21 +73,28 @@
     }
 
     .btn-secondary {
-      margin-bottom: 3px;
-      padding: 0;
-      line-height: 44px;
-      font-size: 18px;
+      width: 245px;
+      line-height: 28px;
+      font-size: 16px;
       border-radius: 8px;
       color: white;
       background-color: black;
       border-color: black;
+
+      span{
+        font-weight: 800;
+        letter-spacing: 2px;
+      }
     }
 
-    .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .btn-secondary:active:focus,
+     .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .btn-secondary:active:focus,
     .open > .dropdown-toggle.btn-secondary {
       color: black;
       background-color: white;
       border-color: black;
+      -webkit-box-shadow: -2px -1px 8px 4px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: -3px -2px 15px 7px rgba(0, 0, 0, 0.425);
+      box-shadow: -4px -3px 23px 11px rgba(0, 0, 0, 0.35);
     }
 
     p, .spotlight-button {
@@ -98,11 +105,11 @@
 
     p {
       background-color: white;
-      font-size: 18px;
+      font-size: 16px;
 
-      //a{
-      //  color: #0495c9;
-      //}
+      a {
+        color: #008D58;
+      }
     }
   }
 
@@ -113,19 +120,32 @@
 
     .icon {
       height: 45px;
-      margin-right: 9px;
+      margin: 0 4px;
+    }
 
-      &:hover {
-        animation: pulse .6s 3;
+    #icon-first {
+      height: 38px;
+      margin: 0 8px;
+    }
 
-        @keyframes pulse {
-          50% {
-            transform: scale(1.18);
-          }
+    .icon-static:hover {
+      animation: pulse 1.3s infinite;
+
+      @keyframes pulse {
+        50% {
+          transform: scale(1.2);
         }
       }
     }
+
   }
+}
+
+#copyright-label {
+  position: absolute;
+  left: 15px;
+  bottom: 8px;
+  font-size: 13px;
 }
 
 #video_background {
